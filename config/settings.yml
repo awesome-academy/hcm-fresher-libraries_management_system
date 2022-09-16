@@ -1,0 +1,10 @@
+length:
+  digit_6: 6
+  digit_10: 10
+  digit_20: 20
+  digit_50: 50
+  digit_255: 255
+format:
+  email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+range:
+  quantity_books: 0..10
