@@ -30,4 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      base_title: "Library Manager"
+    navigation:
+      library: "Library Manager"
+      home: "Home"
+      book: "Book"
+      english: "English"
+      vietnamese: "Vietnamese"
+      signup: "Sing up"
+      login: "Log in"
+      user: "User"
+      infor: "Information"
+      request_cur: "Request Current"
+      request_his: "Request History"
+      request: "Request"
+    header:
+      quote: "A book is a dream that you hold in your hand"
+      quote_author: "Neil Gaiman"
