@@ -4,6 +4,7 @@ length:
   digit_20: 20
   digit_50: 50
   digit_255: 255
+  digit_1000: 1000
 format:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 range:
