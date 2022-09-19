@@ -1,4 +1,14 @@
 vi:
+  activerecord:
+    models:
+      user: "Người dùng"
+      micropost: "Bài viết"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
   layouts:
     application:
       base_title: "Quản lý thư viện"
@@ -23,3 +33,15 @@ vi:
   static_pages:
     home:
       fav_book: "Sách được yêu thích"
+  shared:
+    error_messages:
+      message: "Chứa %{count} lỗi"
+  users:
+    new:
+      signup: "Đăng ký tài khoản"
+      register: "Đăng ký"
+    create:
+      signup_success: "Đăng ký thành công!"
+      signup_fail: "Đăng ký thất bại!"
+    show:
+      user_invalid: "Người dùng không hợp lệ"

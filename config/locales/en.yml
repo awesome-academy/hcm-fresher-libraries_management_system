@@ -30,6 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
   layouts:
     application:
       base_title: "Library Manager"
@@ -54,3 +63,15 @@ en:
   static_pages:
     home:
       fav_book: "Favourite book"
+  shared:
+    error_messages:
+      message: "The form contain %{count} error"
+  users:
+    new:
+      signup: "Sign up"
+      register: "Register"
+    create:
+      signup_success: "Register successful!"
+      signup_fail: "Register failed!"
+    show:
+      user_invalid: "Invalid user"

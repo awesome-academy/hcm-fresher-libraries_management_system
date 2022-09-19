@@ -79,3 +79,4 @@ config/environments/*.local.yml
 spec/models
 spec/views
 spec/controllers
+spec/requests

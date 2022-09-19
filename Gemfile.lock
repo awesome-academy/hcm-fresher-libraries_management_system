@@ -123,6 +123,7 @@ GEM
       dry-core (~> 0.5, >= 0.5)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.8, >= 1.8.0)
+    dynamic_form (1.1.4)
     erubi (1.11.0)
     execjs (2.8.1)
     faker (2.23.0)
@@ -324,6 +325,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   config
+  dynamic_form
   faker
   figaro
   i18n-js

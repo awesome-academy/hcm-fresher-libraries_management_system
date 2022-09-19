@@ -11278,3 +11278,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.field_with_errors .form-control {
+  border: 2px solid red;
+}
