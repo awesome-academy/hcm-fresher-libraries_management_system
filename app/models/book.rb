@@ -6,13 +6,12 @@ class Book < ApplicationRecord
   has_many :requests, through: :request_item
   has_many :comments, dependent: :destroy
 
-  validates :describe, presence: true,
-    length: {maximum: Settings.length.digit_255}
+  validates :describe, presence: true
   validates :name, presence: true,
-    length: {maximum: Settings.length.digit_50}
+    length: {maximum: Settings.lenght.digit_50}
   validates :publisher, presence: true,
-    length: {maximum: Settings.length.digit_50}
+    length: {maximum: Settings.lenght.digit_50}
   validates :category, presence: true,
-    length: {maximum: Settings.length.digit_50}
+    length: {maximum: Settings.lenght.digit_20}
   validates :quantity, presence: true, numericality: {only_integer: true}
 end
