@@ -80,3 +80,4 @@ spec/models
 spec/views
 spec/controllers
 spec/requests
+spec/helpers

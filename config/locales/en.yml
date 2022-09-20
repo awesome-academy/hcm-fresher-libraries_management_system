@@ -63,9 +63,18 @@ en:
   static_pages:
     home:
       fav_book: "Favourite book"
+      home: "Home"
   shared:
     error_messages:
       message: "The form contain %{count} error"
+  sessions:
+    new:
+      login: "Log in"
+      signup_now: "Create an account? Sign up"
+      email: "Email"
+      password: "Password"
+    create:
+      invalid_user: "Invalid email or password!"
   users:
     new:
       signup: "Sign up"
