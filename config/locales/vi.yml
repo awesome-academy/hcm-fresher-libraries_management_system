@@ -10,6 +10,8 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
   layouts:
+    no_same_au:
+      text: "Không có sách cùng tác giả"
     application:
       base_title: "Quản lý thư viện"
     navigation:
@@ -59,3 +61,7 @@ vi:
     index:
       all_book: "Tất cả sách"
       search: "Tìm kiếm"
+    show:
+      book_invalid: "Sách không hợp lệ"
+      add_req: "Thêm vào yêu cầu"
+      same_author: "Cùng tác giả"

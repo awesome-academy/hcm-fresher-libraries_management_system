@@ -9,6 +9,8 @@ class Book < ApplicationRecord
   delegate :name, to: :author, prefix: true
 
   scope :order_name, ->{order name: :asc}
+  scope :group_author, ->(id){where author_id: id}
+  scope :not_current_book, ->(book){where.not(id: book)}
 
   validates :describe, presence: true,
     length: {maximum: Settings.length.digit_255}

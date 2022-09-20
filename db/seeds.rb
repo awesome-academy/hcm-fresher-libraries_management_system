@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 10.times do |n|
   Author.create!(
     name: Faker::Name.name,
@@ -15,7 +8,7 @@ end
 
 authors = Author.all
 
-3.times do |n|
+5.times do |n|
   authors.each do |author|
     book = author.books.create!(
     name: Faker::Book.title,
@@ -30,3 +23,21 @@ authors = Author.all
     book.image.variant(resize: "450x300")
   end
 end
+
+book_first = Book.first
+book_first.update(
+  name: "Dế mèn phiêu lưu ký",
+  describe: "Tác phẩm miêu tả cuộc phiêu lưu của một chú Dế Mèn qua thế giới loài vật và loài người.",
+  category: "Tiểu thuyết",
+  publisher: "NXB Kim Đồng",
+)
+book_first.image.attach({io: File.open(Rails.root.join("app", "assets", "images", "demen.jpg")),
+  filename: "demen.jpg",
+  content_type: "image/jpg"})
+book_image.variant(resize: "450x300")
+
+author_first = Author.first
+author_first.update(
+  name: "Tô Hoài",
+  info: "Tô Hoài (tên khai sinh: Nguyễn Sen; 27 tháng 9 năm 1920 – 6 tháng 7 năm 2014)[1] là một nhà văn Việt Nam. Một số tác phẩm đề tài thiếu nhi của ông được dịch ra ngoại ngữ."
+)
