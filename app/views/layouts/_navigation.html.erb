@@ -10,21 +10,18 @@
         <li class="nav-item">
           <%= link_to t(".book"), "#", class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t(".signup"), signup_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to t(".login"), "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><%= t ".user" %></a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to t(".infor"), "#", class: "dropdown-item"%>
-            <li><hr class="dropdown-divider" /></li>
-            <%= link_to t(".request_cur"), "#", class: "dropdown-item"%>
-            <%= link_to t(".request_his"), "#", class: "dropdown-item"%>
-          </ul>
-        </li>
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to t(".user"), current_user, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t(".signup"), signup_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".login"), login_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
       <form class="d-flex">
         <button class="btn btn-outline-dark" type="submit">

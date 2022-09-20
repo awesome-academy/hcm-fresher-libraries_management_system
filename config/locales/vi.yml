@@ -33,9 +33,18 @@ vi:
   static_pages:
     home:
       fav_book: "Sách được yêu thích"
+      home: "Trang chủ"
   shared:
     error_messages:
       message: "Chứa %{count} lỗi"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      signup_now: "Tạo tài khoản mới? Đăng ký ngay"
+      email: "Email"
+      password: "Mật khẩu"
+    create:
+      invalid_user: "Email hoặc mật khẩu không hợp lệ!"
   users:
     new:
       signup: "Đăng ký tài khoản"
