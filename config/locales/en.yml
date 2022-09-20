@@ -55,6 +55,7 @@ en:
       request_cur: "Request Current"
       request_his: "Request History"
       request: "Request"
+      logout: "Log out"
     header:
       quote: "A book is a dream that you hold in your hand"
       quote_author: "Neil Gaiman"
@@ -84,3 +85,7 @@ en:
       signup_fail: "Register failed!"
     show:
       user_invalid: "Invalid user"
+  books:
+    index:
+      all_book: "All books"
+      search: "Search"

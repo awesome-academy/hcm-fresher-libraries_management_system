@@ -25,6 +25,7 @@ vi:
       request_cur: "Yêu cầu hiện tại"
       request_his: "Lịch sử yêu cầu"
       request: "Yêu cầu"
+      logout: "Đăng xuất"
     header:
       quote: "Mỗi cuốn sách là một giấc mơ mà bạn cầm trên tay"
       quote_author: "Neil Gaiman"
@@ -54,3 +55,7 @@ vi:
       signup_fail: "Đăng ký thất bại!"
     show:
       user_invalid: "Người dùng không hợp lệ"
+  books:
+    index:
+      all_book: "Tất cả sách"
+      search: "Tìm kiếm"

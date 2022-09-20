@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <div class="container px-4 px-lg-5">
     <%= link_to t(".library"), root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -8,7 +8,7 @@
           <%= link_to t(".home"), root_path, class: "nav-link active" %>
         </li>
         <li class="nav-item">
-          <%= link_to t(".book"), "#", class: "nav-link" %>
+          <%= link_to t(".book"), books_path, class: "nav-link" %>
         </li>
         <% if logged_in? %>
           <li class="nav-item">
@@ -36,6 +36,11 @@
             <li class="nav-item">
               <%= link_to t(".vietnamese"), {locale:"vi"}, class: "nav-link" %>
             </li>
+            <% if logged_in? %>
+              <li class="nav-item">
+                <%= link_to t(".logout"), logout_path, method: :delete, class: "nav-link" %>
+              </li>
+            <% end %>
           </ul>
       </form>
     </div>
