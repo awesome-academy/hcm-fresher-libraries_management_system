@@ -85,3 +85,7 @@ en:
       signup_fail: "Register failed!"
     show:
       user_invalid: "Invalid user"
+  books:
+    index:
+      all_book: "All books"
+      search: "Search"

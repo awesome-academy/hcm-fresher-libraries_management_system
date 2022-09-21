@@ -55,3 +55,7 @@ vi:
       signup_fail: "Đăng ký thất bại!"
     show:
       user_invalid: "Người dùng không hợp lệ"
+  books:
+    index:
+      all_book: "Tất cả sách"
+      search: "Tìm kiếm"

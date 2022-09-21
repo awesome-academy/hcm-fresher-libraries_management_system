@@ -6,6 +6,10 @@ class Book < ApplicationRecord
   has_many :requests, through: :request_item
   has_many :comments, dependent: :destroy
 
+  delegate :name, to: :author, prefix: true
+
+  scope :order_name, ->{order name: :asc}
+
   validates :describe, presence: true,
     length: {maximum: Settings.length.digit_255}
   validates :name, presence: true,

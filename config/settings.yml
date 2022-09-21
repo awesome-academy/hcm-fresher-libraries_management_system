@@ -1,6 +1,7 @@
 length:
   digit_6: 6
   digit_10: 10
+  digit_12: 12
   digit_20: 20
   digit_50: 50
   digit_255: 255

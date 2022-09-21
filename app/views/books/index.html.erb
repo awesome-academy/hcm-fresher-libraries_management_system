@@ -1,0 +1,19 @@
+<nav class="navbar mb-3">
+  <div class="container bg-light mt-3 border-4">
+    <a class="navbar-brand ms-3" href="#">
+      <%= t ".all_book" %>
+    </a>
+    <form class="form-inline ml-auto">
+      <div class="md-form my-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </div>
+      <button href="#!" class="btn btn-outline-dark btn-md my-0 ml-sm-2" type="submit"><%= t ".search" %></button>
+    </form>
+  </div>
+</nav>
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+  <%= render @books %>
+</div>
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+  <%== pagy_bootstrap_nav @pagy %>
+</div>
