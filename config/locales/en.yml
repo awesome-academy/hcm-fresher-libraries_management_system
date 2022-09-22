@@ -10,12 +10,16 @@ en:
   activerecord:
     models:
       user: "User"
+      request: "Request"
     attributes:
       user:
         name: "Name"
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirmation"
+      request:
+        day_begin: "Day borrow"
+        day_end: "Day return"
   layouts:
     no_same_au:
       text: "No book of same author"
@@ -33,7 +37,7 @@ en:
       infor: "Information"
       request_cur: "Request Current"
       request_his: "Request History"
-      request: "Request"
+      cart: "Cart"
       logout: "Log out"
     header:
       quote: "A book is a dream that you hold in your hand"
@@ -78,3 +82,61 @@ en:
       book_invalid: "Invalid book"
       add_req: "Add to request"
       same_author: "Same author"
+    book:
+      request: "Request"
+  request_items:
+    book_invalid: "Book is invalid"
+    request_invalid: "Request is invalid"
+    request_item_invalid: "Request book is invalid"
+    create:
+      create_success: "Add request book successful!"
+    request_item:
+      delete: "Delete"
+      sure_delete: "Are you sure delete?"
+    estroy:
+      request_item_del_success: "Request item delete successful!"
+  requests:
+    begin_end_check:
+      error_begin_end: "Please select a time later than the begin time"
+    begin_check:
+      error_begin: "Please select a time later than the current time"
+    show:
+      no_item: "There is no book in your request cart."
+      go_back: "Please go back to get book."
+      caption: "List of books in request"
+      name: "Name"
+      quantity: "Quantity"
+      handle: "Handle"
+      submit: "Submit"
+    update:
+      update_failed: "Update failed"
+      update_success: "Update successful"
+    create:
+      create_req_success: "Create request book successfully"
+      create_req_fail: "Create request book failed"
+    exist_book_ids_into_session:
+      no_book: "No book in your request cart"
+      book_invalid: "There is book invalid in your request cart"
+  carts:
+    create:
+      add_book_success: "Add book successfully"
+      book_exist: "Book was exist"
+      book_invalid: "Book is invalid"
+    index:
+      delete: "Delete"
+      sure_delete: "Are you sure delete?"
+      book_invalid: "Book is invalid"
+      caption: "List books in cart"
+      no_item: "There is no book in your request cart."
+      go_back: "Please go back to get book."
+      name: "Name"
+      quantity: "Quantity"
+      handle: "Handle"
+      submit_req: "Create request"
+      delete_req: "Delete request"
+    destroy:
+      delete_cart: "Delete cart successfully"
+  cart_books:
+    destroy:
+      remove_book_success: "Delete book in cart successful"
+      remove_book_failed: "Delete book is failed"

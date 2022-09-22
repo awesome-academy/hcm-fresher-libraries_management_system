@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
+    delete "/remove_book_from_cart", to: "cart_books#destroy"
+    delete "/remove_cart", to: "carts#destroy"
+
     resources :users, only: %i(new create show)
     resources :books, only: %i(index show)
+    resources :carts, only: %i(index create destroy)
+    resource :request, only: %i(create)
   end
 end

@@ -41,3 +41,10 @@ author_first.update(
   name: "Tô Hoài",
   info: "Tô Hoài (tên khai sinh: Nguyễn Sen; 27 tháng 9 năm 1920 – 6 tháng 7 năm 2014)[1] là một nhà văn Việt Nam. Một số tác phẩm đề tài thiếu nhi của ông được dịch ra ngoại ngữ."
 )
+
+User.create!(
+  name: "tuyen",
+  email: "nguyen.dinh.tuyen@sun-asterisk.com",
+  password: "123456",
+  password_confirmation: "123456"
+)

@@ -10,13 +10,16 @@ vi:
   activerecord:
     models:
       user: "Người dùng"
-      micropost: "Bài viết"
+      request: "Yêu cầu"
     attributes:
       user:
         name: "Tên"
         email: "Địa chỉ email"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
+      request:
+        day_begin: "Ngày mượn"
+        day_end: "Ngày trả"
   layouts:
     no_same_au:
       text: "Không có sách cùng tác giả"
@@ -34,7 +37,7 @@ vi:
       infor: "Thông tin"
       request_cur: "Yêu cầu hiện tại"
       request_his: "Lịch sử yêu cầu"
-      request: "Yêu cầu"
+      cart: "Giỏ mượn"
       logout: "Đăng xuất"
     header:
       quote: "Mỗi cuốn sách là một giấc mơ mà bạn cầm trên tay"
@@ -79,3 +82,61 @@ vi:
       book_invalid: "Sách không hợp lệ"
       add_req: "Thêm vào yêu cầu"
       same_author: "Cùng tác giả"
+    book:
+      request: "Mượn sách"
+  request_items:
+    book_invalid: "Sách không hợp lệ"
+    request_invalid: "Yêu cầu không hợp lệ"
+    request_item_invalid: "Yêu cầu sách không hợp lệ"
+    create:
+      create_success: "Thêm sách vào giỏ mượn thành công!"
+    request_item:
+      delete: "Xóa"
+      sure_delete: "Bạn chắc chắn xóa?"
+    destroy:
+      request_item_del_success: "Xóa thành công!"
+  requests:
+    begin_end_check:
+      error_begin_end: "Vui lòng chọn thời gian trả lớn hơn thời gian mượn"
+    begin_check:
+      error_begin: "Vui lòng chọn thời gian mượn lớn hơn hoặc bằng hiện tại"
+    show:
+      no_item: "Không có cuốn sách nào trong yêu cầu mượn của bạn."
+      go_back: "Trở lại để mượn sách."
+      caption: "Danh sách sách trong giỏ mượn"
+      name: "Tên sách"
+      quantity: "Số lượng"
+      handle: "Xử lý"
+      submit: "Tạo"
+    update:
+      update_failed: "Cập nhật thất bại"
+      update_success: "Cập nhật thành công"
+    create:
+      create_req_success: "Tạo yêu cầu mượn thành công"
+      create_req_fail: "Tạo yêu cầu mượn thất bại"
+    exist_book_ids_into_session:
+      no_book: "Không có sách nào trong yêu cầu"
+      book_invalid: "Có sách không hợp lệ trong yêu cầu"
+  carts:
+    create:
+      add_book_success: "Thêm sách thành công"
+      book_exist: "Sách đã tồn tại"
+      book_invalid: "Sách không hợp lệ"
+    index:
+      delete: "Xóa"
+      sure_delete: "Bạn chắc chắn xóa?"
+      book_invalid: "Sách không hợp lệ"
+      caption: "Danh sách sách trong giỏ mượn"
+      no_item: "Không có cuốn sách nào trong yêu cầu mượn của bạn."
+      go_back: "Trở lại để mượn sách."
+      name: "Tên sách"
+      quantity: "Số lượng"
+      handle: "Xử lý"
+      submit_req: "Tạo yêu cầu mượn"
+      delete_req: "Xóa yêu cầu mượn"
+    destroy:
+      delete_cart: "Xóa giỏ mượn thành công"
+  cart_books:
+    destroy:
+      remove_book_success: "Xóa sách trong giỏ thành công"
+      remove_book_failed: "Xóa sách trong giỏ thất bại"
