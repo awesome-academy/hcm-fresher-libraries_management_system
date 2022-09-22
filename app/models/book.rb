@@ -25,6 +25,5 @@ class Book < ApplicationRecord
     length: {maximum: Settings.length.digit_50}
   validates :publisher, presence: true,
     length: {maximum: Settings.length.digit_50}
-  validates :category, presence: true, numericality: {only_integer: true}
   validates :quantity, presence: true, numericality: {only_integer: true}
 end

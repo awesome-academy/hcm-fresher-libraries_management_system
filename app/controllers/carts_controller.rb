@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :load_book, only: %i(create)
+  before_action ->{load_book(params[:book_id])}, only: :create
   before_action :check_book_id_exist, only: :create
 
   def index

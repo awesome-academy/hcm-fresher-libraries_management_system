@@ -16,6 +16,18 @@ class RequestsController < ApplicationController
     redirect_to root_path
   end
 
+  def index
+    @requests = current_user.requests
+  end
+
+  def show
+    @request = current_user.requests.find_by id: params[:id]
+    return if @request
+
+    flash[:danger] = t ".request_invalid"
+    redirect_to root_url
+  end
+
   private
 
   def request_params

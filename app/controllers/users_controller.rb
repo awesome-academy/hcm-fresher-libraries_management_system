@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout "user", except: %i(create new)
+
   def show
     @user = User.find_by id: params[:id]
     return if @user

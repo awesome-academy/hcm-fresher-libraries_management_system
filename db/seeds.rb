@@ -48,3 +48,10 @@ User.create!(
   password: "123456",
   password_confirmation: "123456"
 )
+
+user_first = User.first
+user_first.avatar.attach({
+  io: File.open(Rails.root.join("app", "assets", "images", "user_img.jpg")),
+  filename: "user_img.jpg",
+  content_type: "image/jpg"
+})

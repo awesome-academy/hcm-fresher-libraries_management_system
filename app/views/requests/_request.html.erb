@@ -1,0 +1,11 @@
+<tr>
+  <td><%= index + 1 %>
+  <td><%= l(request.day_begin, format: :default) %></td>
+  <td><%= l(request.day_end, format: :default) %></td>
+  <td><%= request.request_items.size %></td>
+  <td><%= request.status %></td>
+  <td>
+    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+  </td>
+</tr>

@@ -21,6 +21,9 @@ vi:
         day_begin: "Ngày mượn"
         day_end: "Ngày trả"
   layouts:
+    user:
+      base_title: "Quản lý thư viện"
+      bio_text: "One day or day one. It's your choice!"
     no_same_au:
       text: "Không có sách cùng tác giả"
     application:
@@ -68,6 +71,13 @@ vi:
       signup_fail: "Đăng ký thất bại!"
     show:
       user_invalid: "Người dùng không hợp lệ"
+      info: "Thông tin người dùng"
+      name_html: "<p><span>Tên </span>: %{name} </p>"
+      email_html: "<p><span>Email </span>: %{email} </p>"
+      phone_html: "<p><span>Điện thoại </span>: %{phone} </p>"
+      profile: "Thông tin"
+      requests_history: "Lịch sử yêu cầu"
+      edit_profile: "Chỉnh sửa thông tin"
   books:
     index:
       all_book: "Tất cả sách"
@@ -96,6 +106,13 @@ vi:
     destroy:
       request_item_del_success: "Xóa thành công!"
   requests:
+    index:
+      info: "Lịch sử mượn sách"
+      day_borrow: "Ngày mượn"
+      day_return: "Ngày trả"
+      size: "Số lượng"
+      status: "Trạng thái"
+      actions: "Xử lý"
     begin_end_check:
       error_begin_end: "Vui lòng chọn thời gian trả lớn hơn thời gian mượn"
     begin_check:
@@ -108,6 +125,10 @@ vi:
       quantity: "Số lượng"
       handle: "Xử lý"
       submit: "Tạo"
+    request:
+      detail_request: "Chi tiết yêu cầu"
+      request_day_html: "<p>Ngày mượn: %{begin}, Ngày trả: %{end}</p>"
+      request_size_html: "<p><span>Số sách </span>: %{size} </p>"
     update:
       update_failed: "Cập nhật thất bại"
       update_success: "Cập nhật thành công"

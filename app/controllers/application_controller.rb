@@ -24,8 +24,8 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
-  def load_book
-    @book = Book.find_by id: params[:book_id]
+  def load_book id
+    @book = Book.find_by id: id
     return if @book
 
     flash[:danger] = t ".book_invalid"

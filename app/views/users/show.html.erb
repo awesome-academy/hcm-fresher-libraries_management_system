@@ -1,2 +1,16 @@
-<% provide(:title, @user.name) %>
-<%= "#{@user.name} #{@user.email}" %>
+<div class="panel-body bio-graph-info mt-3 profile-border">
+  <div class="profile-text-center">
+    <h1><%= t ".info" %></h1>
+    <div class="row">
+      <div class="bio-row">
+        <%= t(".name_html", name: @user.name)%>
+      </div>
+      <div class="bio-row">
+        <%= t(".email_html", email: @user.email)%>
+      </div>
+      <div class="bio-row">
+        <%= t(".phone_html", phone: "0777123777")%>
+      </div>
+    </div>
+  </div>
+</div>
