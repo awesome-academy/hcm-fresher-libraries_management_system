@@ -1,4 +1,12 @@
 vi:
+  enums:
+    book:
+      category:
+        child: "Trẻ em"
+        noval: "Tiểu thuyết"
+        detective: "Trinh thám"
+        love_story: "Ngôn tình"
+        life: "Cuộc sống"
   activerecord:
     models:
       user: "Người dùng"
@@ -61,6 +69,12 @@ vi:
     index:
       all_book: "Tất cả sách"
       search: "Tìm kiếm"
+      search_place: "Tìm kiếm tên sách, tên tác giả"
+      child: "Trẻ em"
+      noval: "Tiểu thuyết"
+      detective: "Trinh thám"
+      love_story: "Ngôn tình"
+      life: "Cuộc sống"
     show:
       book_invalid: "Sách không hợp lệ"
       add_req: "Thêm vào yêu cầu"

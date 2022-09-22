@@ -1,6 +1,9 @@
 class BooksController < ApplicationController
   def index
-    @pagy, @books = pagy Book.order_name, items: Settings.length.digit_12
+    @pagy, @books = pagy(
+      Book.search_cate(params[:category]).search(params[:search]).order_name,
+      items: Settings.length.digit_12
+    )
   end
 
   def show

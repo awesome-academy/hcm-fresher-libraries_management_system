@@ -1,4 +1,12 @@
 en:
+  enums:
+    book:
+      category:
+        child: "Children"
+        noval: "Noval"
+        detective: "Detective"
+        love_story: "Love Story"
+        life: "Life"
   activerecord:
     models:
       user: "User"
@@ -60,6 +68,12 @@ en:
     index:
       all_book: "All books"
       search: "Search"
+      search_place: "Search name book, name author"
+      child: "Children"
+      noval: "Noval"
+      detective: "Detective"
+      love_story: "Love Story"
+      life: "Life"
     show:
       book_invalid: "Invalid book"
       add_req: "Add to request"

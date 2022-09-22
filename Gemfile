@@ -8,6 +8,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass"
 gem "config"
 gem "dynamic_form"
+gem "enum_help"
 gem "faker"
 gem "figaro"
 gem "i18n-js"
