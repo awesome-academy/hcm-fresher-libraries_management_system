@@ -124,6 +124,8 @@ GEM
       dry-initializer (~> 3.0)
       dry-schema (~> 1.8, >= 1.8.0)
     dynamic_form (1.1.4)
+    enum_help (0.0.19)
+      activesupport (>= 3.0.0)
     erubi (1.11.0)
     execjs (2.8.1)
     faker (2.23.0)
@@ -277,6 +279,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select2-rails (4.0.13)
     selenium-webdriver (4.4.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -332,6 +335,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   config
   dynamic_form
+  enum_help
   faker
   figaro
   i18n-js
@@ -352,6 +356,7 @@ DEPENDENCIES
   rubocop-checkstyle_formatter
   rubocop-rails (~> 2.14.0)
   sass-rails (>= 6)
+  select2-rails
   selenium-webdriver (>= 4.0.0.rc1)
   spring
   turbolinks (~> 5)
