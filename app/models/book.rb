@@ -17,6 +17,7 @@ class Book < ApplicationRecord
     joins(:author)
       .where("authors.name LIKE :q OR books.name LIKE :q", q: "%#{search}%")
   end)
+  scope :by_ids, ->(ids){where id: ids}
 
   validates :describe, presence: true,
     length: {maximum: Settings.length.digit_255}

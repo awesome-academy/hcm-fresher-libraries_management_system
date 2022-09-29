@@ -1,0 +1,46 @@
+<% if @books.empty? %>
+  <p class="text-center">
+    <%= t(".no_item") %>
+    <%= link_to t(".go_back"), books_path %>
+  </p>
+<% else %>
+  <table class="table table-success table-striped caption-top">
+    <caption><%= t ".caption" %></caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><%= t ".name" %></th>
+        <th scope="col"><%= t ".quantity" %></th>
+        <th scope="col"><%= t ".handle" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% index = 0 %>
+      <% @books.each do |book| %>
+        <tr>
+          <th scope="row"><%= index += 1 %></th>
+          <td><%= book.name %></td>
+          <td>1</td>
+          <td><%= link_to t(".delete"), remove_book_from_cart_path(book_id: book.id), method: :delete,
+            data: {confirm: t(".sure_delete")} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= form_for @request, url: {action: "create", controller: "requests"}, authenticity_token: true do |f| %>
+    <div class="row align-items-center">
+      <div class="col-auto my-1">
+        <%= f.label :day_begin, class: "form-label" %>
+        <%= f.date_field :day_begin, class: "form-control" %>
+      </div>
+      <div class="col-auto my-1">
+        <%= f.label :day_end, class: "form-label" %>
+        <%= f.date_field :day_end, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-auto my-1">
+      <%= link_to t(".delete_req"), remove_cart_path, method: :delete, class: "btn btn-danger", data: {confirm: t(".sure_delete")} %>
+      <%= f.button t(".submit_req"), class: "btn btn-primary", type: "submit" %>
+    </div>
+  <% end %>
+<% end %>
