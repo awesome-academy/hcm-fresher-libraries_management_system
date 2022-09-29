@@ -30,5 +30,6 @@ class RequestsController < ApplicationController
     @books = Book.find session[:book_ids]
   rescue ActiveRecord::RecordNotFound
     flash[:danger] = t ".book_invalid"
+    redirect_to root_path
   end
 end
