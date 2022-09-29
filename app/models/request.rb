@@ -8,8 +8,8 @@ class Request < ApplicationRecord
   validates :day_begin, presence: true
   validates :day_end, presence: true
 
-  validate :begin_end_check
-  validate :begin_check
+  validate :begin_end_check, if: ->{day_begin || day_end}
+  validate :begin_check, if: :day_begin
 
   private
 

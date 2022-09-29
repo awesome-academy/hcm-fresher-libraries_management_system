@@ -26,7 +26,7 @@
       <%= button_tag t(".search"), type: "submit", class: "btn btn-outline-dark btn-md my-0 ml-sm-2" %>
     <% end %>
 </nav>
-<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
   <%= render @books %>
   <%== pagy_bootstrap_nav @pagy %>
 </div>

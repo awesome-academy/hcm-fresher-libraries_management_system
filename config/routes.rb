@@ -15,6 +15,6 @@ Rails.application.routes.draw do
     resources :users, only: %i(new create show)
     resources :books, only: %i(index show)
     resources :carts, only: %i(index create destroy)
-    resource :request, only: %i(create)
+    resources :requests, only: %i(create index show)
   end
 end
