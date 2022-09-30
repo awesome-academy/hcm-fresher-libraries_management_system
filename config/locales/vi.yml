@@ -1,4 +1,6 @@
 vi:
+  error_begin_end: "Vui lòng chọn thời gian trả lớn hơn thời gian mượn"
+  error_begin: "Vui lòng chọn thời gian mượn lớn hơn hoặc bằng hiện tại"
   admin:
     users:
       show:
@@ -18,6 +20,13 @@ vi:
       request:
         view: "Xem"
         edit: "Sửa"
+      edit:
+        edit_request: "Chỉnh sửa yêu cầu"
+        save: "Lưu"
+        cancel: "Hủy bỏ"
+      update:
+        update_success: "Cập nhật yêu cầu mượn thành công"
+        update_failed: "Cập nhật yêu cầu mượn thất bại"
   time:
     formats:
       default: "%d-%m-%Y"
@@ -30,6 +39,11 @@ vi:
         detective: "Trinh thám"
         love_story: "Ngôn tình"
         life: "Cuộc sống"
+    request:
+      status:
+        pending: "Đang chờ"
+        fulfilled: "Đã chấp nhận"
+        rejected: "Bị từ chối"
   activerecord:
     models:
       user: "Người dùng"
@@ -43,6 +57,7 @@ vi:
       request:
         day_begin: "Ngày mượn"
         day_end: "Ngày trả"
+        status: "Trạng thái"
   layouts:
     admin:
       base_title: "Admin manager"
@@ -139,10 +154,6 @@ vi:
       size: "Số lượng"
       status: "Trạng thái"
       actions: "Xử lý"
-    begin_end_check:
-      error_begin_end: "Vui lòng chọn thời gian trả lớn hơn thời gian mượn"
-    begin_check:
-      error_begin: "Vui lòng chọn thời gian mượn lớn hơn hoặc bằng hiện tại"
     show:
       no_item: "Không có cuốn sách nào trong yêu cầu mượn của bạn."
       go_back: "Trở lại để mượn sách."
@@ -164,6 +175,7 @@ vi:
       book_invalid: "Có sách không hợp lệ trong yêu cầu"
   carts:
     create:
+      book_sold_out: "Sách này đã hết, không thể thêm vào giỏ"
       add_book_success: "Thêm sách thành công"
       book_exist: "Sách đã tồn tại"
       book_invalid: "Sách không hợp lệ"
