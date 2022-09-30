@@ -42,16 +42,32 @@ author_first.update(
   info: "Tô Hoài (tên khai sinh: Nguyễn Sen; 27 tháng 9 năm 1920 – 6 tháng 7 năm 2014)[1] là một nhà văn Việt Nam. Một số tác phẩm đề tài thiếu nhi của ông được dịch ra ngoại ngữ."
 )
 
-User.create!(
-  name: "tuyen",
-  email: "nguyen.dinh.tuyen@sun-asterisk.com",
-  password: "123456",
-  password_confirmation: "123456"
-)
+5.times do |n|
+  name = Faker::Name.name
+  email = "example-#{n+1}@sun-asterisk.com"
+  password = "password"
+  user = User.create!(
+    name: name,
+    email: email,
+    password: password,
+    password_confirmation: password,
+  )
+  user.avatar.attach({
+    io: File.open(Rails.root.join("app", "assets", "images", "user_img.jpg")),
+    filename: "user_img.jpg",
+    content_type: "image/jpg"
+  })
+end
 
-user_first = User.first
-user_first.avatar.attach({
-  io: File.open(Rails.root.join("app", "assets", "images", "user_img.jpg")),
-  filename: "user_img.jpg",
+admin = User.create!(
+  name: "admin",
+  email: "admin@sun-asterisk.com",
+  password: "123456",
+  password_confirmation: "123456",
+  role: 0,
+)
+admin.avatar.attach({
+  io: File.open(Rails.root.join("app", "assets", "images", "admin.jpg")),
+  filename: "admin.jpg",
   content_type: "image/jpg"
 })

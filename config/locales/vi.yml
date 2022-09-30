@@ -1,4 +1,27 @@
 vi:
+  admin:
+    users:
+      show:
+        not_permit: "Bạn không phải admin, không có quyền truy cập!"
+        info: "Thông tin người dùng"
+        name_html: "<p><span>Tên </span>: %{name} </p>"
+        email_html: "<p><span>Email </span>: %{email} </p>"
+        phone_html: "<p><span>Điện thoại </span>: %{phone} </p>"
+    requests:
+      index:
+        info: "Danh sách các yêu cầu mượn"
+      show:
+        request_invalid: "Yêu cầu mượn không hợp lệ"
+        view_detal: "Chi tiết yêu cầu mượn"
+        request_day_html: "<p>Ngày mượn: %{begin}, Ngày trả: %{end}</p>"
+        request_size_html: "<p><span>Tổng số sách </span>: %{size} </p>"
+      request:
+        view: "Xem"
+        edit: "Sửa"
+  time:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%d %b %Y"
   enums:
     book:
       category:
@@ -21,6 +44,9 @@ vi:
         day_begin: "Ngày mượn"
         day_end: "Ngày trả"
   layouts:
+    admin:
+      base_title: "Admin manager"
+      bio_text: "One day or day one. It's your choice!"
     user:
       base_title: "Quản lý thư viện"
       bio_text: "One day or day one. It's your choice!"
@@ -127,8 +153,6 @@ vi:
       submit: "Tạo"
     request:
       detail_request: "Chi tiết yêu cầu"
-      request_day_html: "<p>Ngày mượn: %{begin}, Ngày trả: %{end}</p>"
-      request_size_html: "<p><span>Số sách </span>: %{size} </p>"
     update:
       update_failed: "Cập nhật thất bại"
       update_success: "Cập nhật thành công"
