@@ -1,7 +1,7 @@
 <tr>
   <td><%= index + 1 %>
-  <td><%= l(request.day_begin, format: :default) %></td>
-  <td><%= l(request.day_end, format: :default) %></td>
+  <td><%= l(request.day_begin, format: :short) %></td>
+  <td><%= l(request.day_end, format: :short) %></td>
   <td><%= request.request_items.size %></td>
   <td><%= request.status %></td>
   <td>

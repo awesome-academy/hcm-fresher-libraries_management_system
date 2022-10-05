@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   before_save :downcase_email
-  enum role: {admin: 0, client: 1}
+  enum role: {admin: 0, client: 1}, _default: 1
 
   has_one_attached :avatar
   has_many :requests, dependent: :destroy

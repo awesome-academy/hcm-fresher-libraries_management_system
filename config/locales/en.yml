@@ -1,6 +1,25 @@
 en:
+  admin:
+    users:
+      show:
+        not_permit: "You is not admin, you can't access!"
+        info: "Information"
+        name_html: "<p><span>Name </span>: %{name} </p>"
+        email_html: "<p><span>Email </span>: %{email} </p>"
+        phone_html: "<p><span>Phone </span>: %{phone} </p>"
+    requests:
+      index:
+        info: "List of requests"
+      show:
+        request_invalid: "Request is invalid"
+        view_detal: "View detail of request"
+        request_day_html: "<p>Day borrow: %{begin}, Day return: %{end}</p>"
+        request_size_html: "<p><span>Books </span>: %{size} </p>"
+      request:
+        view: "View"
+        edit: "Edit"
   time:
-    format:
+    formats:
       default: "%d-%m-%Y"
       short: "%d %b %Y"
   enums:
@@ -25,6 +44,9 @@ en:
         day_begin: "Day borrow"
         day_end: "Day return"
   layouts:
+    admin:
+      base_title: "Admin manager"
+      bio_text: "One day or day one. It's your choice!"
     user:
       base_title: "Library Manager"
       bio_text: "One day or day one. It's your choice!"
@@ -131,8 +153,6 @@ en:
       actions: "Actions"
     request:
       detail_request: "Detail request"
-      request_day_html: "<p>Day borrow: %{begin}, Day return: %{end}</p>"
-      request_size_html: "<p><span>Books </span>: %{size} </p>"
     update:
       update_failed: "Update failed"
       update_success: "Update successful"

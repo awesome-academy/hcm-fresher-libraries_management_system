@@ -1,0 +1,18 @@
+<tr>
+  <td><%= index + 1 %>
+  <td><%= request.user_name %>
+  <td><%= l(request.day_begin, format: :short) %></td>
+  <td><%= l(request.day_end, format: :short) %></td>
+  <td><%= request.request_items.size %></td>
+  <td><%= request.status %></td>
+  <td>
+    <div class="row justify-content-center">
+      <%= link_to admin_request_path(request), remote: true do %>
+        <i class="material-icons" data-toggle="tooltip" title=<%= t ".view" %>>&#xe8f4;
+      <% end %>
+      <%= link_to edit_admin_request_path(request), remote: true do %>
+        <i class="material-icons" data-toggle="tooltip" title=<%= t ".edit" %>>&#xe3c9;
+      <% end %>
+    </div>
+  </td>
+</tr>

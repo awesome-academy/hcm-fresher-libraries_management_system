@@ -16,5 +16,10 @@ Rails.application.routes.draw do
     resources :books, only: %i(index show)
     resources :carts, only: %i(index create destroy)
     resources :requests, only: %i(create index show)
+
+    namespace :admin do
+      resources :requests, except: %i(new create)
+      resources :users, only: :show
+    end
   end
 end

@@ -1,15 +1,18 @@
 class Request < ApplicationRecord
   belongs_to :user
   has_many :request_items, dependent: :destroy
-  has_many :books, through: :request_item
+  has_many :books, through: :request_items
 
-  enum status: {pending: 1, fulfilled: 2, rejected: 3}
-  attribute :status, default: "pending"
+  delegate :name, to: :user, prefix: true
+  enum status: {pending: 1, fulfilled: 2, rejected: 3}, _default: 1
+
   validates :day_begin, presence: true
   validates :day_end, presence: true
 
   validate :begin_end_check, if: ->{day_begin || day_end}
   validate :begin_check, if: :day_begin
+
+  scope :order_day_begin, ->{order day_begin: :asc}
 
   private
 

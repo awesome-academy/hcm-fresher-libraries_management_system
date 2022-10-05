@@ -1,0 +1,19 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <form>
+      <div class="modal-header">
+        <h4 class="modal-title"><%= t(".view_detal") %></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <% @request.request_items each do |request_item| %>
+          <p><%= request_item.book_name %></p>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <%= t(".request_day_html", begin: l(@request.day_begin, format: :short), end: l(@request.day_end, format: :short)) %>
+        <%= t(".request_size_html", size: @request.request_items.size)%>
+      </div>
+    </form>
+  </div>
+</div>
