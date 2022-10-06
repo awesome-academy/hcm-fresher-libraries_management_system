@@ -4,7 +4,7 @@
   <td><%= l(request.day_begin, format: :short) %></td>
   <td><%= l(request.day_end, format: :short) %></td>
   <td><%= request.request_items.size %></td>
-  <td><%= request.status %></td>
+  <td><%= request.status_i18n %></td>
   <td>
     <div class="row justify-content-center">
       <%= link_to admin_request_path(request), remote: true do %>

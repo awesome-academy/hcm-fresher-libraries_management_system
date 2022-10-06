@@ -1,7 +1,10 @@
 en:
+  error_begin_end: "Please select a time later than the begin time"
+  error_begin: "Please select a time later than the current time"
   admin:
     users:
       show:
+
         not_permit: "You is not admin, you can't access!"
         info: "Information"
         name_html: "<p><span>Name </span>: %{name} </p>"
@@ -18,6 +21,13 @@ en:
       request:
         view: "View"
         edit: "Edit"
+      edit:
+        edit_request: "Edit request"
+        save: "Save"
+        cancel: "Cancel"
+      update:
+        update_success: "Update request successfully"
+        update_failed: "Update request failed"
   time:
     formats:
       default: "%d-%m-%Y"
@@ -30,6 +40,11 @@ en:
         detective: "Detective"
         love_story: "Love Story"
         life: "Life"
+    request:
+      status:
+        pending: "Pending"
+        fulfilled: "Fullfilled"
+        rejected: "Rejected"
   activerecord:
     models:
       user: "User"
@@ -43,6 +58,7 @@ en:
       request:
         day_begin: "Day borrow"
         day_end: "Day return"
+        status: "Status"
   layouts:
     admin:
       base_title: "Admin manager"
@@ -132,10 +148,6 @@ en:
     estroy:
       request_item_del_success: "Request item delete successful!"
   requests:
-    begin_end_check:
-      error_begin_end: "Please select a time later than the begin time"
-    begin_check:
-      error_begin: "Please select a time later than the current time"
     show:
       no_item: "There is no book in your request cart."
       go_back: "Please go back to get book."
@@ -164,6 +176,7 @@ en:
       book_invalid: "There is book invalid in your request cart"
   carts:
     create:
+      book_sold_out: "This book has been sold out. Can't add to the cart"
       add_book_success: "Add book successfully"
       book_exist: "Book was exist"
       book_invalid: "Book is invalid"

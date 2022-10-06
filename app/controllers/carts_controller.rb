@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   before_action ->{load_book(params[:book_id])}, only: :create
-  before_action :check_book_id_exist, only: :create
+  before_action :check_book_id_exist, :check_book_quantity, only: :create
 
   def index
     @books = Book.by_ids(session[:book_ids])
@@ -25,6 +25,13 @@ class CartsController < ApplicationController
     return unless session[:book_ids].include?(params[:book_id])
 
     flash[:danger] = t ".book_exist"
+    redirect_to books_path
+  end
+
+  def check_book_quantity
+    return if book.quantity < 1
+
+    flash[:danger] = t ".book_sold_out"
     redirect_to books_path
   end
 end
