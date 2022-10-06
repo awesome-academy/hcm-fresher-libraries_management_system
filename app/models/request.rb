@@ -14,8 +14,6 @@ class Request < ApplicationRecord
 
   scope :order_day_begin, ->{order :day_begin}
 
-  before_update :update_quantity, if: :fulfilled?
-
   UPDATE_ATTRS = %i(status note).freeze
 
   private
@@ -26,11 +24,5 @@ class Request < ApplicationRecord
 
   def begin_check
     errors.add(:day_begin, I18n.t("error_begin")) if day_begin < Time.zone.now
-  end
-
-  def update_quantity
-    books.each do |book|
-      book.quantity -= 1
-    end
   end
 end

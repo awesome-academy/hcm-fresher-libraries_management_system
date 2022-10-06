@@ -29,7 +29,7 @@ class CartsController < ApplicationController
   end
 
   def check_book_quantity
-    return if book.quantity < 1
+    return if @book.quantity >= 1
 
     flash[:danger] = t ".book_sold_out"
     redirect_to books_path

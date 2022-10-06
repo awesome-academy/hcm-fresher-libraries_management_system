@@ -10,10 +10,16 @@ class Admin::RequestsController < AdminController
   def edit; end
 
   def update
-    if @request.update request_params
+    ActiveRecord::Base.transaction do
+      @request.update! request_params
+      if @request.fulfilled?
+        @request.books.each do |book|
+          book.update! quantity: book.quantity - 1
+        end
+      end
       flash[:info] = t ".update_success"
       redirect_to admin_requests_path
-    else
+    rescue ActiveRecord::RecordInvalid
       flash.now[:danger] = t ".update_failed"
       render :edit
     end
