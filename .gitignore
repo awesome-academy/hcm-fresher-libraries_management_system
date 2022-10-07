@@ -76,8 +76,4 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 
-spec/models
-spec/views
-spec/controllers
-spec/requests
-spec/helpers
+spec/factories
