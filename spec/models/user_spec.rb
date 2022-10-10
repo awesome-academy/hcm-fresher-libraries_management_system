@@ -37,7 +37,7 @@ RSpec.describe User, type: :model do
   it { should define_enum_for(:role).with_values(admin: 0, client: 1) }
 
   context "callbacks" do
-    let(:user) { FactoryBot.create(:user) }
+    let(:user) { FactoryBot.build(:user) }
     it { expect(user).to callback(:downcase_email).before(:save) }
   end
 end
