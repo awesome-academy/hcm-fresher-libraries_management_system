@@ -43,6 +43,7 @@ group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver", ">= 4.0.0.rc1"
   gem "webdrivers"
+  gem "rails-controller-testing"
   gem "shoulda-callback-matchers"
 end
 
