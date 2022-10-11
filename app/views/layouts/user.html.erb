@@ -20,7 +20,7 @@
             <div class="profile-nav col-md-3">
               <div class="panel">
                 <div class="user-heading round border-r-5 mb-2">
-                  <a href="#"><%= image_tag @user.avatar %></a>
+                  <%= link_to(image_tag(check_image?(@user.avatar, "user_img.jpg")), "#") %>
                   <h1><%= @user.name %></h1>
                   <p><%= @user.email %></p>
                 </div>
