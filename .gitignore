@@ -77,3 +77,7 @@ config/settings/*.local.yml
 config/environments/*.local.yml
 
 spec/factories
+
+app/views/devise/mailer
+app/views/devise/passwords
+app/views/devise/shared

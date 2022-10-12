@@ -198,3 +198,15 @@ en:
     destroy:
       remove_book_success: "Delete book in cart successful"
       remove_book_failed: "Delete book is failed"
+  devise:
+    sessions:
+      new:
+        login: "Log in"
+        signup_now: "Create an account? Sign up"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+    registrations:
+      new:
+        signup: "Sign up"
+        register: "Register"

@@ -50,7 +50,6 @@ author_first.update(
     name: name,
     email: email,
     password: password,
-    password_confirmation: password,
   )
   user.avatar.attach({
     io: File.open(Rails.root.join("app", "assets", "images", "user_img.jpg")),

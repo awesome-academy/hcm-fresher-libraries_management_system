@@ -7,6 +7,7 @@ gem "bcrypt"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass"
 gem "config"
+gem "devise"
 gem "dynamic_form"
 gem "enum_help"
 gem "faker"

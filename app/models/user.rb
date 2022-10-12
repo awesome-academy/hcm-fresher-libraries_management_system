@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   before_save :downcase_email
   enum role: {admin: 0, client: 1}, _default: 1
 
@@ -17,8 +19,6 @@ class User < ApplicationRecord
             uniqueness: {case_sensitive: false}
   validates :password, presence: true,
     length: {minimum: Settings.length.digit_6}, allow_nil: true
-
-  has_secure_password
 
   def downcase_email
     email.downcase!

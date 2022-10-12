@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   layout "user", except: %i(create new)
+  before_action :authenticate_user!, only: :show
 
   def show
     @user = User.find_by id: params[:id]
@@ -7,21 +8,6 @@ class UsersController < ApplicationController
 
     flash[:danger] = t ".user_invalid"
     redirect_to root_url
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new user_params
-    if @user.save
-      flash[:info] = t ".signup_success"
-      redirect_to @user
-    else
-      flash.now[:danger] = t ".signup_fail"
-      render :new
-    end
   end
 
   private

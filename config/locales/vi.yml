@@ -197,3 +197,15 @@ vi:
     destroy:
       remove_book_success: "Xóa sách trong giỏ thành công"
       remove_book_failed: "Xóa sách trong giỏ thất bại"
+  devise:
+    sessions:
+      new:
+        login: "Đăng nhập"
+        signup_now: "Tạo tài khoản mới? Đăng ký ngay"
+        email: "Email"
+        password: "Mật khẩu"
+        remember_me: "Ghi nhớ mật khẩu"
+    registrations:
+      new:
+        signup: "Đăng ký tài khoản"
+        register: "Đăng ký"
