@@ -1,5 +1,6 @@
 class RequestsController < ApplicationController
   before_action :exist_book_ids_into_session, only: :create
+  load_and_authorize_resource
 
   def create
     @request = current_user.requests.build(request_params)
