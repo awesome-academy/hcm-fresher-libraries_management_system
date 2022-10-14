@@ -1,5 +1,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div class="container-xl">
+  <nav class="navbar navbar-light default-color bg-light">
+    <form class="form-inline my-2 my-lg-0 ml-auto">
+      <%= link_to t(".all_request"), admin_requests_path, class: "navbar-brand ms-2" %>
+      <%= search_form_for(@search, url: admin_requests_path, method: :get) do |f| %>
+        <%= f.search_field :user_name_cont, placeholder: t(".search_name") %>
+        <%= f.label :day_begin, class: "mx-2" %>
+        <%= f.date_field :day_begin_eq %>
+        <%= f.label :day_end, t(".day_end"), class: "mx-2" %>
+        <%= f.date_field :day_end_eq %>
+        <%= f.label :status, class: "mx-2" %>
+        <%= f.select :status_eq, Request.statuses.to_a.map { |w| [w[0].humanize, w[1]] },
+                         {:include_blank => true} %>
+        <%= button_tag t(".search"), type: "submit", class: "btn btn-outline-primary btn-md my-0 ml-sm-2 mx-4" %>
+      <% end %>
+    </form>
+  </nav>
   <div class="table-responsive">
     <div class="table-wrapper">
       <div class="table-title">
@@ -13,12 +29,24 @@
         <thead>
           <tr>
             <th>#</th>
-            <th><%= t ".user_name" %></th>
-            <th><%= t ".day_borrow" %></th>
-            <th><%= t ".day_return" %></th>
-            <th><%= t ".size" %></th>
-            <th><%= t ".status" %></th>
-            <th><%= t ".actions" %></th>
+            <th>
+              <%= sort_link(@search, :user_name, t(".user_name"), default_order: :desc, class: "text-decoration-none") %>
+            </th>
+            <th>
+              <%= sort_link(@search, :day_begin, t(".day_start"), default_order: :desc) %>
+            </th>
+            <th>
+              <%= sort_link(@search, :day_end, t(".day_end"), default_order: :desc) %>
+            </th>
+            <th>
+              <%= sort_link(@search, :size, t(".size"), default_order: :desc) %>
+            </th>
+            <th>
+              <%= sort_link(@search, :status, default_order: :desc) %>
+            </th>
+            <th>
+              <%= t ".actions" %>
+            </th>
           </tr>
           <% @requests.each_with_index do |request, index| %>
             <%= render "request", request: request, index: index %>

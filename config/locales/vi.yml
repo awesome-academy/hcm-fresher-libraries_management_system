@@ -12,6 +12,13 @@ vi:
     requests:
       index:
         info: "Danh sách các yêu cầu mượn"
+        search_name: "Tìm kiếm theo tên"
+        all_request: "Tất cả yêu cầu"
+        size: "Số sách"
+        actions: "Hành động"
+        user_name: "Tên người mượn"
+        day_start: "Ngày mượn"
+        day_end: "Ngày trả"
       show:
         request_invalid: "Yêu cầu mượn không hợp lệ"
         view_detal: "Chi tiết yêu cầu mượn"

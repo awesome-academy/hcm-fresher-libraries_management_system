@@ -8,15 +8,11 @@ class Book < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   delegate :name, to: :author, prefix: true
+  ransack_alias :book_author, :author_name_or_name
 
-  scope :order_name, ->{order name: :asc}
   scope :group_author, ->(id){where author_id: id}
   scope :not_current_book, ->(book){where.not(id: book)}
   scope :search_cate, ->(cate){where category: cate if cate.present?}
-  scope :search, (lambda do |search|
-    joins(:author)
-      .where("authors.name LIKE :q OR books.name LIKE :q", q: "%#{search}%")
-  end)
   scope :by_ids, ->(ids){where id: ids}
 
   validates :describe, presence: true,

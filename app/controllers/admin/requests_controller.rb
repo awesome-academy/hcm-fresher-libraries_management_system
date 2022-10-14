@@ -3,7 +3,8 @@ class Admin::RequestsController < AdminController
   load_and_authorize_resource
 
   def index
-    @requests = Request.order_day_begin.includes(:user, :books)
+    @search = Request.ransack(params[:q])
+    @requests = @search.result.includes(:user, :books, :request_items)
   end
 
   def show; end
