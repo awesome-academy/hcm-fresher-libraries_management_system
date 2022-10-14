@@ -11938,3 +11938,6 @@ table.table .avatar {
 .modal form label {
 	font-weight: normal;
 }
+a {
+  text-decoration: none !important;
+}

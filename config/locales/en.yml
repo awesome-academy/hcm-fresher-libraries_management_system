@@ -4,7 +4,6 @@ en:
   admin:
     users:
       show:
-
         not_permit: "You is not admin, you can't access!"
         info: "Information"
         name_html: "<p><span>Name </span>: %{name} </p>"
@@ -13,6 +12,13 @@ en:
     requests:
       index:
         info: "List of requests"
+        search_name: "Search by name"
+        all_request: "All requesta"
+        size: "Book count"
+        actions: "Actions"
+        user_name: "User name"
+        day_start: "Day borrow"
+        day_end: "Day return"
       show:
         request_invalid: "Request is invalid"
         view_detal: "View detail of request"

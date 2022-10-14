@@ -2,8 +2,10 @@ class BooksController < ApplicationController
   before_action ->{load_book(params[:id])}, only: :show
 
   def index
+    @search = Book.ransack(params[:q])
+    @search.sorts = "name asc" if @search.sorts.empty?
     @pagy, @books = pagy(
-      Book.search_cate(params[:category]).search(params[:search]).order_name,
+      @search.result.includes(:author).search_cate(params[:category]),
       items: Settings.length.digit_12
     )
   end

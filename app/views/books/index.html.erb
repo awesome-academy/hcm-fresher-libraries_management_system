@@ -19,9 +19,9 @@
       </li>
     </ul>
   </div>
-    <%= form_tag books_path, class: "form-inline ml-auto p-2", method: "get" do %>
+    <%= search_form_for @search, class: "form-inline ml-auto p-2" do |f| %>
       <div class="md-form my-0">
-        <%= text_field_tag :search, params[:search], class: "form-control", placeholder: t(".search_place") %>
+        <%= f.search_field :book_author_cont, class: "form-control", placeholder: t(".search_place") %>
       </div>
       <%= button_tag t(".search"), type: "submit", class: "btn btn-outline-dark btn-md my-0 ml-sm-2" %>
     <% end %>
