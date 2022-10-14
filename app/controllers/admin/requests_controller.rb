@@ -1,5 +1,6 @@
 class Admin::RequestsController < AdminController
   before_action :load_request, only: %i(show edit update)
+  load_and_authorize_resource
 
   def index
     @requests = Request.order_day_begin.includes(:user, :books)

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   layout "user", except: %i(create new)
   before_action :authenticate_user!, only: :show
+  load_and_authorize_resource
 
   def show
     @user = User.find_by id: params[:id]

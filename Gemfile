@@ -6,6 +6,7 @@ ruby "2.7.0"
 gem "bcrypt"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass"
+gem "cancancan"
 gem "config"
 gem "devise"
 gem "dynamic_form"
@@ -42,10 +43,10 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
-  gem "selenium-webdriver", ">= 4.0.0.rc1"
-  gem "webdrivers"
   gem "rails-controller-testing"
+  gem "selenium-webdriver", ">= 4.0.0.rc1"
   gem "shoulda-callback-matchers"
+  gem "webdrivers"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

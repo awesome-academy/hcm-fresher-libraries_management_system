@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   before_action ->{load_book(params[:book_id])}, only: :create
   before_action :check_book_id_exist, :check_book_quantity, only: :create
+  authorize_resource class: false
 
   def index
     @books = Book.by_ids(session[:book_ids])
