@@ -11,9 +11,15 @@
           <%= link_to t(".book"), books_path, class: "nav-link" %>
         </li>
         <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to t(".user"), current_user, class: "nav-link" %>
-          </li>
+          <% if current_user.admin? %>
+            <li class="nav-item">
+              <%= link_to t(".admin"), rails_admin_path, class: "nav-link" %>
+            </li>
+          <% else%>
+            <li class="nav-item">
+              <%= link_to t(".user"), current_user, class: "nav-link" %>
+            </li>
+          <% end %>
         <% else %>
           <li class="nav-item">
             <%= link_to t(".signup"), signup_path, class: "nav-link" %>
