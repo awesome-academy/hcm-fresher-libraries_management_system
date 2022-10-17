@@ -4,7 +4,7 @@ class Book < ApplicationRecord
 
   has_one_attached :image
   has_many :request_items, dependent: :destroy
-  has_many :requests, through: :request_item
+  has_many :requests, through: :request_items
   has_many :comments, dependent: :destroy
 
   delegate :name, to: :author, prefix: true

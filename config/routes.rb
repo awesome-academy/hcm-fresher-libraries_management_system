@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
+    mount RailsAdmin::Engine => "/admin", as: "rails_admin"
+
     devise_scope :user do
       get "/signin", to: "devise/sessions#new"
       post "/signin", to: "devise/sessions#create"
