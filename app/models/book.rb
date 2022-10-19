@@ -22,4 +22,19 @@ class Book < ApplicationRecord
   validates :publisher, presence: true,
     length: {maximum: Settings.length.digit_50}
   validates :quantity, presence: true, numericality: {only_integer: true}
+
+  CSV_ATTRIBUTES = %w(Name Publisher Category Author_name Quantity).freeze
+
+  def to_csv
+    [name, publisher, category, author_name, quantity]
+  end
+
+  def self.file_csv
+    CSV.generate(option = {}) do |file|
+      file << Book::CSV_ATTRIBUTES
+      all.includes(:author).each do |book|
+        file << book.to_csv
+      end
+    end
+  end
 end

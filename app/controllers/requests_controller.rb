@@ -8,7 +8,7 @@ class RequestsController < ApplicationController
     @books.each do |book|
       @request.request_items.build(book_id: book.id, quantity: 1)
     end
-    check_create_saved @request
+    check_create_saved @request, current_user
   end
 
   def index
@@ -40,8 +40,9 @@ class RequestsController < ApplicationController
     redirect_to requests_path
   end
 
-  def check_create_saved request
+  def check_create_saved request, user
     if request.save
+      SendEmailJob.perform_later user
       flash[:info] = t ".create_req_success"
       session.delete :book_ids
     else

@@ -349,3 +349,8 @@ vi:
       next: Tiếp &raquo;
       previous: "&laquo; Trước"
       truncate: "…"
+  user_mailer:
+    create_request: "Tạo yêu cầu mượn"
+    create_request_success:
+      greating: "Xin chào"
+      notice: "Bạn đã tạo yêu cầu mượn tại thư viện X thành công!"

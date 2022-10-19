@@ -217,3 +217,8 @@ en:
       new:
         signup: "Sign up"
         register: "Register"
+  user_mailer:
+    create_request: "Create request"
+    create_request_success:
+      greating: "Hello"
+      notice: "You have created a new request book in library successfully!"
