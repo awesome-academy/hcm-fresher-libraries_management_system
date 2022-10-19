@@ -23,4 +23,8 @@ class User < ApplicationRecord
   def downcase_email
     email.downcase!
   end
+
+  def send_mail_create_request
+    UserMailer.create_request_success(self).deliver_now
+  end
 end
