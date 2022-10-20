@@ -81,3 +81,5 @@ spec/factories
 app/views/devise/mailer
 app/views/devise/passwords
 app/views/devise/shared
+
+config/application.yml

@@ -10,6 +10,7 @@ class Book < ApplicationRecord
   delegate :name, to: :author, prefix: true
   ransack_alias :book_author, :author_name_or_name
 
+  scope :order_name, ->{order :name}
   scope :group_author, ->(id){where author_id: id}
   scope :not_current_book, ->(book){where.not(id: book)}
   scope :search_cate, ->(cate){where category: cate if cate.present?}
