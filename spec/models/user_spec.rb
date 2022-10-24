@@ -30,8 +30,6 @@ RSpec.describe User, type: :model do
       it { should validate_presence_of(:password).allow_nil }
       it { should validate_length_of(:password).is_at_least(6) }
     end
-
-    it { should have_secure_password }
   end
 
   it { should define_enum_for(:role).with_values(admin: 0, client: 1) }

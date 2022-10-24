@@ -1,4 +1,4 @@
 class AuthorSerializer < ActiveModel::Serializer
-  attributes :id, :name, :dob
-  has_many :books
+  attributes :id, :name, :dob, :info
+  has_many :books, serializer: BookSerializer
 end
