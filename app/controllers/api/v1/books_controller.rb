@@ -1,4 +1,4 @@
-class Api::V1::BooksController < ApplicationController
+class Api::V1::BooksController < Api::V1::ApiController
   before_action :load_book, only: :show
 
   def index
