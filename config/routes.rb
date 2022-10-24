@@ -29,9 +29,20 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace "api" do
+  namespace "api", default: {format: :json} do
     namespace "v1" do
+      devise_for :users,
+      path: "",
+      path_names: {
+        sign_in: "login",
+        sign_out: "logout",
+        registration: "signup",
+      },
+      controllers: {
+        sessions: "api/v1/sessions",
+      }
       resources :books, only: %i(index show)
+      resources :users, only: %i(show update)
     end
   end
 end
